@@ -15,7 +15,9 @@ export const Logos = () => {
           </a>
         </div>
       )}
-      {transition((style, item) => item && <animated.div style={style} className="item" />)}
+      <div className="logo-container">
+        {transition((style, item) => item && <animated.div style={style} className="item" />)}
+      </div>
     </>
   );
 };
