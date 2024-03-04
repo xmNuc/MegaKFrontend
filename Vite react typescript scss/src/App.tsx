@@ -1,4 +1,3 @@
-import './App.css';
 import { InstalInfo } from './components/InstallInfo';
 import { Logos } from './components/Logos';
 
