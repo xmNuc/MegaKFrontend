@@ -1,0 +1,59 @@
+.matrix-text {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+
+  .letter {
+    opacity: 0;
+    transition: 1s;
+  }
+
+  .text {
+    opacity: 0;
+    transition: opacity 0.1s;
+    animation: falling 5s linear forwards;
+  }
+
+  @keyframes falling {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .show {
+    opacity: 1;
+    animation: glitch 0.1s infinite alternate-reverse;
+  }
+
+  @keyframes glitch {
+    0%,
+    90%,
+    95%,
+    100% {
+      transform: translateY(0);
+    }
+    91% {
+      transform: translateY(-2px);
+    }
+    92% {
+      transform: translateY(2px);
+    }
+    93% {
+      transform: translateY(-5px);
+    }
+    94% {
+      transform: translateY(5px);
+    }
+  }
+}
